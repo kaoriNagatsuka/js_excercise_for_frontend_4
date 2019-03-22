@@ -18,10 +18,13 @@
   //   - テキストボックスの中を空にする
 
   addButton.addEventListener('click', (event) => {
-    // 配列に値をセット
-    todos.push(textBox.value);
-    textBox.value = '';
-    showTodo();
+    // textBoxに値が入っているかどうか
+    if (textBox.value) {
+      // 配列に値をセット
+      todos.push(textBox.value);
+      textBox.value = '';
+      showTodo();
+    }
   });
 
   // 「todos」の中身を一覧表示する
